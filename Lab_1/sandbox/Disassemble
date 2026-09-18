@@ -1,0 +1,39 @@
+ Программа на ассемблере
+   0x401000 <_start>:   mov    rax,0x4
+   0x401007 <_start+7>: mov    rbx,0x1
+   0x40100e <_start+14>:        movabs rcx,0x402000
+   0x401018 <_start+24>:        mov    rdx,0xc
+   0x40101f <_start+31>:        int    0x80
+   0x401021 <_start+33>:        mov    rax,0x4
+   0x401028 <_start+40>:        mov    rbx,0x1
+   0x40102f <_start+47>:        movabs rcx,0x40200d
+   0x401039 <_start+57>:        mov    rdx,0x6
+   0x401040 <_start+64>:        int    0x80
+   0x401042 <_start+66>:        mov    rax,0x4
+   0x401049 <_start+73>:        mov    rbx,0x1
+   0x401050 <_start+80>:        movabs rcx,0x402014
+   0x40105a <_start+90>:        mov    rdx,0xd
+   0x401061 <_start+97>:        int    0x80
+   0x401063 <_start+99>:        mov    rax,0x1
+   0x40106a <_start+106>:       mov    rbx,0x0
+   0x401071 <_start+113>:       int    0x80
+
+
+Программа на С
+   Dump of assembler code for function main:
+   0x0000000000001149 <+0>:     endbr64
+   0x000000000000114d <+4>:     push   rbp
+   0x000000000000114e <+5>:     mov    rbp,rsp
+   0x0000000000001151 <+8>:     lea    rax,[rip+0xeac]        # 0x2004
+   0x0000000000001158 <+15>:    mov    rdi,rax
+   0x000000000000115b <+18>:    call   0x1050 <puts@plt>
+   0x0000000000001160 <+23>:    lea    rax,[rip+0xea9]        # 0x2010
+   0x0000000000001167 <+30>:    mov    rdi,rax
+   0x000000000000116a <+33>:    call   0x1050 <puts@plt>
+   0x000000000000116f <+38>:    lea    rax,[rip+0xea0]        # 0x2016
+   0x0000000000001176 <+45>:    mov    rdi,rax
+   0x0000000000001179 <+48>:    call   0x1050 <puts@plt>
+   0x000000000000117e <+53>:    mov    eax,0x0
+   0x0000000000001183 <+58>:    pop    rbp
+   0x0000000000001184 <+59>:    ret
+End of assembler dump.

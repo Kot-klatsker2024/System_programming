@@ -1,0 +1,53 @@
+1.
+mkdir Work
+cd Work
+mkdir Лабораторная_работа_№1!
+mkdir Сергучанов_Тимур_Николаевич
+2.
+mkdir Контрольная_работа_№1!
+chmod u+rwx,g+rwx Контрольная_работа_№1!
+chmod u+w,g+w Лабораторная_работа_№1!
+chmod u+w Сергучанов_Тимур_Николаевич
+3.
+touch Text_@1
+touch Text_$2
+touch Text_#3
+4.
+cat > Text_@1
+Птица говорун отличается умом и сообразительностью!
+Отличается умом, отличается сообразительностью...
+Ctrl+D
+5.
+cp Text_@1 Text_$2
+6.
+mv 'Text_$2' Лабораторная_работа_№1!/
+cp 'Text_@1' Сергучанов_Тимур_Николаевич
+7.
+gzip 'Text_@1'
+gzip 'Text_#3'
+tar -cvf MyAchiv.tar Text_@1.gz Text_#3.gz
+8.
+zcat 'Text_@1.gz' | head -n 1 | gzip > 'Text_#3.gz'
+(zcat 'Text_#3.gz'; echo "Будь осторожен! Преступник вооружен!") | gzip > 'Text_#3.gz.tmp' && mv 'Text_#3.gz.tmp' 'Text_#3.gz'
+9.
+cd Сергучанов_Тимур_Николаевич
+touch Result_one
+tac Text_@1 > Result_one
+10.
+mv Result_one Result_two
+11.
+cd ..
+cd Лабораторная_работа_№1!
+touch Result_3
+cd ..
+cd Сергучанов_Тимур_Николаевич
+find . -name 'T*' -type f -exec cat {} + > '../Лабораторная_работа_№1!/Result_3'
+12.
+cd ..
+cd Лабораторная_работа_№1!
+(echo ""; uname -a; date) >> Result_3
+
+mkdir Lab_1
+mv sandbox Lab_1/
+mv Work Lab_1/
+mv Work_files Lab_1/
