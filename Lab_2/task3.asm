@@ -3,8 +3,8 @@ format ELF64
 public _start
 
 section ".data" writeable
-    N = 21
-    char db "8"
+    N = 36
+    char db "$"
     endl db 0xA
 
 section ".text" executable
