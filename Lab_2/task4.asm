@@ -4,8 +4,10 @@ public _start
 
 section ".data" writeable
     N db "1019734634"
-    result db ?, ?
     endl   db 0xA
+
+section ".bss" writeable
+    result rb 2
 
 section ".text" executable
 _start:

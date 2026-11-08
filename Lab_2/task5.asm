@@ -6,11 +6,13 @@ public _start
 section ".text" executable writeable
 
     N db "1019734634"
-    result db ?, ?
     endl   db 0xA
 
+section ".bss" writeable
+    result rb 2
+
 _start:
-    xor r12d, r12d      ; Оптимизация: xor занимает 3 байта вместо 7 байт у mov r12, 0
+    xor r12d, r12d
     mov rsi, N
     add rsi, 10
     mov r13, rsi
@@ -26,7 +28,7 @@ N_loop:
     jne N_loop
 
     mov eax, r12d
-    xor edx, edx        ; Оптимизация: xor edx, edx вместо mov edx, 0
+    xor edx, edx
     mov ecx, 10
     div ecx
 
@@ -49,5 +51,5 @@ N_loop:
     syscall
 
     mov rax, 60
-    xor edi, edi        ; Оптимизация: xor edi, edi вместо mov rdi, 0
+    xor edi, edi        
     syscall

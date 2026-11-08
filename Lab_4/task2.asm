@@ -2,9 +2,9 @@ format ELF64
 
 public _start
 
-section ".data" writeable
-    number db ?, ?, ?
-    sum db ?, ?, ?
+section ".bss" writeable
+    number rb 3
+    sum rb 3
 
 section ".text" executable
 _start:

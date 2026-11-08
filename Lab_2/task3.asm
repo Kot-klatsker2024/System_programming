@@ -14,7 +14,7 @@ _start:
     mov rsi, char
     loop_str:
         mov rbx, r13
-        loop_8:
+        loop_$:
             mov rax, 1
             mov rdi, 1
             mov rdx, 1
@@ -26,7 +26,7 @@ _start:
 
             sub rbx, 1
             cmp rbx, 0
-            jne loop_8
+            jne loop_$
 
         mov r14, rsi
 

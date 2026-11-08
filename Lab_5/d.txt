@@ -1,0 +1,5 @@
+File names should be passed by command line parameters.
+the first line of the first file should be the last in the second, etc.
+the line ends with a line break and write them to the second file in reverse order:
+read all the lines
+For a given text file (Latin),

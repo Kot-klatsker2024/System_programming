@@ -1,9 +1,10 @@
+; (((a/b)+a)/c)
 format ELF64
 
 public _start
 
-section ".data" writeable
-    result db ?
+section ".bss" writeable
+    result rb 1
 
 section ".text" executable
 _start:

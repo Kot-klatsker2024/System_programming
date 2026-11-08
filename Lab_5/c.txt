@@ -1,0 +1,5 @@
+For a given text file (Latin),
+read all the lines
+the line ends with a line break and write them to the second file in reverse order:
+the first line of the first file should be the last in the second, etc.
+File names should be passed by command line parameters.

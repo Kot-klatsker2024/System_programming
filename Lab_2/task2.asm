@@ -1,4 +1,4 @@
-format ELF64 
+format ELF64
 
 public _start
 
@@ -7,8 +7,10 @@ section ".data" writeable
     M = 9
     N = K * M
     char = "$"
-    matrix rb 1000
     endl db 0xA
+
+section ".bss" writeable
+    matrix rb 36
 
 section ".text" executable
 _start:
@@ -52,7 +54,7 @@ M_loop:
     sub r13, 1
     cmp r13, 0
     jne K_loop
-    
+
     mov rax, 60
     mov rdi, 0
     syscall
